@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>Face Recognition</title>
+	<link rel="stylesheet" href="/static/css/css.css">
+	<link rel="stylesheet" href="/static/fas/fontas/css/font-awesome.css">
+	<link rel="stylesheet" href="/static/fas/fontas/css/font-awesome.min.css">
+    <style>
+	img {
+  	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+	width: 35%
+	}
+    </style>
+    <style>
+      .button {
+        display: inline-block;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: red;
+        border-radius: 6px;
+        outline: none;
+	margin-right: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="margin-botton=5px; margin-left:50px" class="center">
+		<a  class="del-icon" style="margin-right: 10px !important;" href="/"><i class="fa fa-arrow-left" aria-hidden="true" ></i></a>
+		<a style=" background-color: gray !important;" href="/add" class="button btn-back">Them khuon mat</a>
+		<a style=" background-color: green !important;" href="/list-unk" class="button btn-back ">Danh sach nguoi la vao</a>
+		<a style=" background-color: lightcoral !important;" href="/list-know" class="button btn-back">Danh sach nguoi quen vao</a>
+		<a style=" background-color: blue !important;" href="/list-info" class="button btn-back">Danh sach ten chu nha</a>
+    </div>
+   
+    <div>
+	<h1 align="center">Your Face</h1>
+
+    	<img id="bg" class="center" src="{{ url_for('video_feed1') }}">
+    </div>
+  </body>
+</html>

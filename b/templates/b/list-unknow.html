@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Face_recogization</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		  <link rel="stylesheet" href="css.css">
+		  <link rel="stylesheet" href="fas/fontas/css/font-awesome.css">
+		  <link rel="stylesheet" href="fas/fontas/css/font-awesome.min.css">
+	<style>
+	img {
+  	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+	width: 150px;
+	heigh: 150px;
+	margin: 10px;
+	}
+    </style>
+    
+
+
+</head>
+<body>
+<div class="container">
+
+    <div class="row">
+		
+        <div class="col-lg-12" >
+            <h1 class="page-header">Unknown Object List</h1>
+        </div>
+	</div>
+	<div style="margin-bottom:20px;">
+		<a  href="/" class="button btn-back">Back</a>
+		</div>
+	<div class="row mg-t-50">
+		<table class="table border-1">
+			<thead class="thead-dark">
+				<tr>
+					 <th>Time</th>
+					<th>Image</th>
+				</tr>
+			</thead>
+	
+			<tbody>
+			 {% for image_name in image_names %}
+				{% set root = image_name.split('.')[0] %}
+				{% set date = root.split('-')[1] %}
+				{% set year = date.split(':')[0] %}
+				{% set month = date.split(':')[1] %}
+				{% set day = date.split(':')[2] %}
+				{% set hour = date.split(':')[3] %}
+				{% set minutes = date.split(':')[4] %}
+				{% set second = date.split(':')[5] %}
+				<tr>
+						<td>
+							<img  src=" {{url_for('send_image1', filename=image_name)}}">
+						</td>
+					<td>
+						<span>{{ hour }}:{{ minutes }}:{{ second }}  {{ day }}/{{ month }}/20{{ year }}<span> 
+					   
+					</td>
+				</tr>
+			 {% endfor %}
+			</tbody>
+		</table>
+	</div>
+	
+       <!-- {% for image_name in image_names %}
+	{% set root = image_name.split('.')[0] %}
+	{% set date = root.split('-')[1] %}
+        <div class="col-lg-3 col-md-4 col-xs-6 ">
+            <img  src=" {{url_for('send_image1', filename=image_name)}}">
+	    <span class="ml-2>{{ date }}<span><br>
+        </div>
+        {% endfor %} --!>
+	</div>
+    </div>
+</div>
+
+</body>
+</html>

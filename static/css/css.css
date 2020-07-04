@@ -1,0 +1,151 @@
+*{
+    font-family: 'Courier New', Courier, monospace ;
+    color: white;
+}
+body{
+    background-image: url(../img/wp.jpg);
+    background-size: cover;
+}
+.mg-t-50{
+    margin-top: 50px;
+}
+
+
+.page-header{
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+    font-weight: 900;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+table th, table td{
+    border: 1px solid #ddd;
+    padding: 8px;
+    font-size: 18px;
+}
+
+
+table tr:hover{
+    background-color: rgba(183, 224, 236,0.4);
+}
+table thead tr:hover{
+    background-color: rgb(67, 151, 70);
+}
+table thead{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 20px;
+}
+.del-icon{
+    color: rgb(243, 76, 76);
+    font-size: 25px;
+    transition: all ease 0.2s;
+    -webkit-transition: all ease 0.2s;
+    -moz-transition: all ease 0.2s;
+    -ms-transition: all ease 0.2s;
+    -o-transition: all ease 0.2s;
+}
+.del-icon:hover{
+    color: rgb(110, 4, 4);
+}
+
+.grp-btn{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+.grp-btn .nav-btn{
+    color: white;
+    margin: 10px;
+    padding: 10px 20px;
+    border: 1px solid white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 20px;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -webkit-border-radius: 10p;
+    -moz-border-radius: 10p;
+    -ms-border-radius: 10p;
+    -o-border-radius: 10p;
+}
+
+.grp-btn .nav-btn:hover{
+    background: white;
+    color: black;
+    -webkit-box-shadow: 0 0 10px #d3f7ee, 0 0 40px #d3f7ee, 0 0 80px #d3f7ee;
+          box-shadow: 0 0 10px #d3f7ee, 0 0 40px #d3f7ee, 0 0 80px #d3f7ee;
+}
+.h1-class{
+    font-weight: 700;
+    font-size: 50px;
+    text-align: center;
+    cursor: pointer;
+    text-transform: capitalize;
+    color: white;
+}
+
+.h1-class:hover{
+  
+  color: #255784;
+  -webkit-box-shadow: 0 0 10px #4bf1c8, 0 0 40px #4bf1c8, 0 0 80px #4bf1c8;
+          box-shadow: 0 0 10px #4bf1c8, 0 0 40px #4bf1c8, 0 0 80px #4bf1c8;
+  background: #4bf1c8;
+  -webkit-transition-delay: .4s;
+          transition-delay: .4s;
+
+}
+.form-div{
+    display: flex;
+    justify-content: center;
+}
+.add-form{
+    padding: 10px;
+    width: 500px;
+    margin-left: 20px;
+    color: black !important;
+    font-weight: 700;
+    border: 1px solid white;
+}
+
+.add-face-btn:hover{
+    -webkit-box-shadow: 0 0 5px #4bf1c8, 0 0 15px #4bf1c8, 0 0 30px #4bf1c8;
+          box-shadow: 0 0 5px #4bf1c8, 0 0 15px #4bf1c8, 0 0 30px #4bf1c8;
+  background: #4bf1c8;
+  
+}
+
+.add-form span label{
+    width: 30%;
+}
+
+.add-form span input{
+    padding-right: 0;
+    width: 60%;
+    color: black;
+}
+.add-form .btn-row{
+    display: flex;
+    justify-content: center;
+}
+.add-face-btn{
+    width: 100px !important;
+   font-weight: 900;
+   background: none;
+   color: white !important;
+   border: 1px solid white;
+   transition: 0.3s all ease;
+   -webkit-transition: 0.3s all ease;
+   -moz-transition: 0.3s all ease;
+   -ms-transition: 0.3s all ease;
+   -o-transition: 0.3s all ease;
+}

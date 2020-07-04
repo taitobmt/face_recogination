@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <title>Face Recognition</title>
+  <!--
+    <link rel="stylesheet" href="/static/css/css.css">
+  -->
+  <link rel="stylesheet" href="../static/css/css.css">
+  <link rel="stylesheet" href="/static/fas/fontas/css/font-awesome.css">
+   
+  <link rel="stylesheet" href="/static/fas/fontas/css/font-awesome.min.css">
+   
+    <style>
+	img {
+  	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+	width: 35%
+	}
+    </style>
+    <style>
+      .button {
+        display: inline-block;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: red;
+        border-radius: 6px;
+        outline: none;
+	margin-right: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grp-btn">
+		
+		<a href="/add" class="nav-btn">ADD FACE</a>
+		<a href="/list-unk" class="nav-btn">STRANGERS LIST</a>
+		<a href="/list-know" class="nav-btn">LIST OF ACQUAINTANCES</a>
+		<a href="/list-info" class="nav-btn">LIST OF FAMILIES</a>
+    </div>
+   
+    <div >
+	<h1 class="h1-class" >YOUR FACE</h1>
+
+    	<img id="bg" class="center" src="{{ url_for('video_feed1') }}">
+    </div>
+  </body>
+</html>

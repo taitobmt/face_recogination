@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <title>Face Recognition</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<!--
+    <link rel="stylesheet" href="/static/css/css.css">
+  -->
+  <link rel="stylesheet" href="../static/css/css.css">
+  <link rel="stylesheet" href="/static/fas/fontas/css/font-awesome.css">
+	<link rel="stylesheet" href="/static/fas/fontas/css/font-awesome.min.css">
+    <style>
+	img {
+  	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+	width: 35%
+	}
+    </style>
+
+  </head>
+  <body>
+   <div class="grp-btn">
+	<a href="/add" class="nav-btn">ADD FACE</a>
+	<a href="/list-unk" class="nav-btn">STRANGERS LIST</a>
+	<a href="/list-know" class="nav-btn">LIST OF ACQUAINTANCES</a>
+	<a href="/list-info" class="nav-btn">LIST OF FAMILIES</a>
+    </div>
+
+    <div  class="form-div">
+      
+  <form action="/add_face" method="post" class="add-form">
+    <span class="id-row">
+      <label>ID</label>
+	  <input name="id" type="number" style="color: black;"></input><br><br>
+    </span>
+ 	  <span class="un-row">
+      <label>USERNAME</label>
+      <input type="text" name="username"></input><br><br>
+     </span>
+	  <span class="btn-row">
+      <input type="submit" value="Add-face" class="add-face-btn"></input>
+    </span>
+	  
+	</form>
+    </div>
+
+    <div>
+      <h1 class="h1-class">Your Face</h1>
+    <img id="bg" class="center" src="{{ url_for('video_feed') }}">
+    </div>
+    
+  </body>
+</html>

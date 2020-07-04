@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Face_recogization</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <style>
+	table, th, td {
+	  border-bottom: 1px solid black;
+	  text-align: center;
+	  margin-bttom: 2px;
+	}
+    </style>
+    <style>
+	table {
+	  width: 100%;
+
+	}
+    </style>
+    <style>
+      .button {
+        display: inline-block;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: red;
+        border-radius: 6px;
+        outline: none;
+	margin-right: 5px;
+      }
+
+    </style>
+
+
+</head>
+<body>
+<div class="container">
+
+    <div class="row">
+	<div style="margin-botton=5px; margin-left:50px" class="center">
+		
+		<a style=" background-color: gray !important;" href="/" class="button">Back</a>
+		<a style=" background-color: gray !important;" href="/add" class="button">Them khuon mat</a>
+		<a style=" background-color: red !important;" class="button">Xoa khuon mat</a>
+		<a style=" background-color: green !important;" href="/list-unk" class="button">Danh sach nguoi la vao</a>
+		<a style=" background-color: lightcoral !important;" href="/list-know" class="button">Danh sach nguoi quen vao</a>
+		<a style=" background-color: blue !important;" href="/list-info" class="button">Danh sach ten chu nha</a>
+    	</div>
+
+        <div class="col-lg-12" style="color: blue; text-align: center;">
+            <h1 class="page-header">List Person</h1>
+        </div>
+        <hr>	
+	<div class="row">
+	<div>
+	</div>
+	<table>
+		<thead>
+			<tr>
+			 <th style="width: 20%">Id</th>
+			 <th style="width: 70%">Username</th>
+			 <th style="width: 10%">Action</th>
+			</tr>
+		</thead>
+		<tbody>
+		 {% for row in persons %}
+		     <tr>
+		         <td>{{ row[0] }}</td>
+		         <td>{{ row[1] }}</td>
+		         <td><a style=" background-color: red !important;  padding: 5px 10px; margin:5px" href="/delete{{ row[0] }}" class="button">Delete</a></td>
+		      </tr>
+        	 {% endfor %}
+		</tbody>
+	</table>
+        
+    </div>
+</div>
+
+</body>
+</html>

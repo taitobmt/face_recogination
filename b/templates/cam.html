@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>Face Recognition</title>
+    <style>
+	img {
+  	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+	width: 35%
+	}
+    </style>
+    <style>
+	.button {
+        display: inline-block;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: red;
+        border-radius: 6px;
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="margin-botton=5px; margin-left:50px" class="center">
+	<a style=" background-color: blue !important;" href="/" class="button">Quay Lai</a><br><br>
+    </div>
+
+    <h1 align="center">Your Face</h1>
+    <img id="bg" class="center" src="{{ url_for('video_feed') }}">
+  </body>
+</html>
